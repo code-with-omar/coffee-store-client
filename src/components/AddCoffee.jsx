@@ -3,7 +3,7 @@
 const AddCoffee = () => {
     return (
         <div>
-            hello addCoffee
+            
         </div>
     );
 };
