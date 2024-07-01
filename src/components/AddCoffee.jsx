@@ -1,6 +1,6 @@
 // import { Button } from "bootstrap";
 import { Col, Form, Row, Container, Button } from "react-bootstrap";
-
+import Swal from 'sweetalert2'
 
 const AddCoffee = () => {
     const handleAddCoffee = (event) => {
@@ -24,7 +24,17 @@ const AddCoffee = () => {
             body: JSON.stringify(coffee)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'success!',
+                        text: 'Successfully uploaded',
+                        icon: 'success',
+                        confirmButtonText: 'Okay'
+                    })
+                }
+            })
     }
     return (
         <Container className="mt-5">
