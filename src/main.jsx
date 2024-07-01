@@ -11,15 +11,16 @@ import AddCoffee from './components/AddCoffee.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App></App>
+    element: <App></App>,
+    loader: () => fetch('http://localhost:5000/coffee')
   },
   {
-    path:"/addCoffee",
-    element:<AddCoffee></AddCoffee>
+    path: "/addCoffee",
+    element: <AddCoffee></AddCoffee>
   },
   {
-    path:"/updateCoffee",
-    element:<UpdateCoffee></UpdateCoffee>
+    path: "/updateCoffee",
+    element: <UpdateCoffee></UpdateCoffee>
   }
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
