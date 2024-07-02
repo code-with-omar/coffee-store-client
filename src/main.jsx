@@ -8,6 +8,9 @@ import {
 } from "react-router-dom";
 import UpdateCoffee from './components/UpdateCoffee.jsx';
 import AddCoffee from './components/AddCoffee.jsx';
+import SingIn from './components/SingIn.jsx';
+import SingUp from './components/SingUp.jsx';
+import AuthProvider from './components/providers/AuthProvider.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -21,11 +24,21 @@ const router = createBrowserRouter([
   {
     path: "/update/:id",
     element: <UpdateCoffee></UpdateCoffee>,
-    loader:({params})=>fetch(`http://localhost:5000/coffee/${params.id}`)
+    loader: ({ params }) => fetch(`http://localhost:5000/coffee/${params.id}`)
+  },
+  {
+    path: "/singup",
+    element: <SingUp></SingUp>
+  },
+  {
+    path: "/singin",
+    element: <SingIn></SingIn>
   }
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
