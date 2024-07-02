@@ -11,6 +11,7 @@ import AddCoffee from './components/AddCoffee.jsx';
 import SingIn from './components/SingIn.jsx';
 import SingUp from './components/SingUp.jsx';
 import AuthProvider from './components/providers/AuthProvider.jsx';
+import Users from './components/Users.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
   {
     path: "/singin",
     element: <SingIn></SingIn>
+  },
+  {
+    path: '/users',
+    element: <Users></Users>,
+    loader: () => fetch('http://localhost:5000/users')
   }
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(

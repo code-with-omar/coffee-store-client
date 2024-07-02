@@ -14,8 +14,10 @@ const SingUp = () => {
         // const confirmPassword = form.confirmPassword.value;
         createUser(email, password)
             .then(result => {
-                console.log(result)
-                const users = { email, password }
+                console.log(result);
+                const createAt = result.user?.metadata?.creationTime
+                console.log(createAt)
+                const users = { email, createAt: createAt }
                 fetch('http://localhost:5000/users', {
                     method: 'POST',
                     headers: {
@@ -57,10 +59,6 @@ const SingUp = () => {
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" name="password" placeholder="Password" />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="basicPassword">
-                    <Form.Label>Comfiram Password</Form.Label>
-                    <Form.Control type="password" name="confirmPassword" placeholder="comfram Password" />
                 </Form.Group>
                 <Button variant="primary" type="submit">
                     Sing Up
