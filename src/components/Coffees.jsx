@@ -7,7 +7,7 @@ import { Link, } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
-const Coffees = ({ coffee }) => {
+const Coffees = ({ coffee, coffees, setCoffees }) => {
     const { _id, name, nameOfChef, supplier, taste, category, details, photo } = coffee
 
     const handleDelete = (id) => {
@@ -34,6 +34,8 @@ const Coffees = ({ coffee }) => {
                                 text: "Your Coffee has been deleted.",
                                 icon: "success"
                             });
+                            const reamining = coffees.filter(cof => cof._id != id)
+                            setCoffees(reamining)
                         }
                     })
             }
