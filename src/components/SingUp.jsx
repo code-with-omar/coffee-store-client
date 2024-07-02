@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { AuthContext } from "./providers/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const SingUp = () => {
@@ -14,6 +15,27 @@ const SingUp = () => {
         createUser(email, password)
             .then(result => {
                 console.log(result)
+                const users = { email, password }
+                fetch('http://localhost:5000/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(users)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        if (data.insertedId) {
+                            Swal.fire({
+                                position: "top-middle",
+                                icon: "success",
+                                title: "Sign Up successfull",
+                                confirmButtonText: 'Okay',
+
+                            });
+                        }
+                    })
             })
             .catch(error => {
                 console.log(error)
