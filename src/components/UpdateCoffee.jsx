@@ -1,9 +1,12 @@
+import { useLoaderData } from "react-router-dom";
 
 
 const UpdateCoffee = () => {
+    const coffeDetails=useLoaderData()
+    console.log(coffeDetails)
     return (
         <div>
-            hello update coffee
+          
         </div>
     );
 };

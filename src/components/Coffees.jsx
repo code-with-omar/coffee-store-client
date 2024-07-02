@@ -55,7 +55,7 @@ const Coffees = ({ coffee }) => {
                         <p>Test: {taste}</p>
                     </Col>
                     <Col className="d-flex flex-column">
-                        <Link to="/edit"><img src={Edit} /></Link>
+                        <Link to={`update/${_id}`}><img src={Edit} /></Link>
                         <Link to="/view"><img src={View} /></Link>
                         <Link onClick={() => handleDelete(_id)}><img src={Del} /></Link>
                     </Col>
