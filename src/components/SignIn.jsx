@@ -1,12 +1,36 @@
+import { useContext } from "react";
 import { Button, Container, Form } from "react-bootstrap";
+import { AuthContext } from "./providers/AuthProvider";
 
 const SignIn = () => {
+    const { singInUser } = useContext(AuthContext)
     const handleSignIn = (e) => {
         e.preventDefault();
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log({ email, password })
+        singInUser(email, password)
+            .then(result => {
+                const users = {
+                    email,
+                    lastLoggedAt: result.user?.metadata?.lastSignInTime
+                }
+                //update last logged in database
+                fetch('http://localhost:5000/users', {
+                    method: 'PATCH',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(users)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                    })
+            })
+            .catch(error => {
+                console.error(error)
+            })
     }
     return (
         <Container>
