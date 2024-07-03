@@ -69,7 +69,7 @@ const Users = () => {
                             <td>{index + 1}</td>
                             <td>{user.email}</td>
                             <td>{user.createAt}</td>
-                            <td>{user.lastLogin || "N/A"}</td>
+                            <td>{user.lastLoggedAt || "N/A"}</td>
                             <td>
                                 <button onClick={() => handleDelete(user._id)} className="btn btn-danger">
                                     Delete
