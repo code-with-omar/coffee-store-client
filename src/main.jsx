@@ -8,10 +8,10 @@ import {
 } from "react-router-dom";
 import UpdateCoffee from './components/UpdateCoffee.jsx';
 import AddCoffee from './components/AddCoffee.jsx';
-import SingIn from './components/SingIn.jsx';
 import SingUp from './components/SingUp.jsx';
 import AuthProvider from './components/providers/AuthProvider.jsx';
 import Users from './components/Users.jsx';
+import SignIn from './components/SignIn.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,8 +32,8 @@ const router = createBrowserRouter([
     element: <SingUp></SingUp>
   },
   {
-    path: "/singin",
-    element: <SingIn></SingIn>
+    path: "/signin",
+    element: <SignIn></SignIn>
   },
   {
     path: '/users',
