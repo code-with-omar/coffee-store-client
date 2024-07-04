@@ -13,6 +13,7 @@ import AuthProvider from './components/providers/AuthProvider.jsx';
 import Users from './components/Users.jsx';
 import SignIn from './components/SignIn.jsx';
 import View from './components/View.jsx';
+import ContactUs from './components/ContactUs.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,9 +25,9 @@ const router = createBrowserRouter([
     element: <AddCoffee></AddCoffee>
   },
   {
-    path:'/viewCoffee/:id',
-    element:<View></View>,
-    loader:({params})=>fetch(`http://localhost:5000/coffee/${params.id}`)
+    path: '/viewCoffee/:id',
+    element: <View></View>,
+    loader: ({ params }) => fetch(`http://localhost:5000/coffee/${params.id}`)
   },
   {
     path: "/update/:id",
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
     path: '/users',
     element: <Users></Users>,
     loader: () => fetch('http://localhost:5000/users')
+  },
+  {
+    path: '/contact',
+    element: <ContactUs></ContactUs>
   }
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
