@@ -4,12 +4,14 @@ import { useLoaderData } from 'react-router-dom';
 import Coffees from './components/Coffees';
 import { useState } from 'react';
 import Hero from './components/Hero';
+import Header from './components/Header';
 
 function App() {
   const loadedCoffees = useLoaderData();
   const [coffees, setCoffees] = useState(loadedCoffees);
   return (
     <Container fluid>
+      <Header></Header>
       <Hero></Hero>
       <Row xs={1} md={2} className="g-4">
         {

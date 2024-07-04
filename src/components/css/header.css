@@ -1,0 +1,28 @@
+.header-wrap {
+    background: url('./../../../public/images/icons/back.png') no-repeat center center;
+    height: 120px;
+    margin: 0
+}
+
+.header-contain {
+    display: flex;
+    margin: 0 auto;
+    width: 500px;
+    padding-top:20px ;
+}
+
+.header-image {
+    width: 75px;
+    height: 90px;
+}
+
+.header-wrap h2 {
+    color: #FFF;
+    font-family: Rancho;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 16px;
+    margin-top: 5px;
+}
