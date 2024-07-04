@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rancho&display=swap');
+
+.font-family {
+    font-family: "Rancho", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-family-2 {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+}
+
+:root {
+    --dark-01: #242222;
+    --dark-02: #331A15;
+    --dark-03: #1B1A1A;
+    --white: #FFF;
+    --orange-01: #E3B577;
+    --orange-02: #D2B48C;
+    --bg-linear: linear-gradient(90deg, rgba(126, 144, 254, 0.05) 0%, rgba(152, 115, 255, 0.05) 100%);
+    --bg-button: linear-gradient(90deg, #7E90FE 0%, #9873FF 100%);
+    --footer-dark-01: rgba(255, 255, 255, 0.40);
+    --footer-dark-02: rgba(255, 255, 255, 0.70);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* background color  */
+.bg-linear-white {
+    background: var(--bg-linear);
+}
+
+.bg-white {
+    background: var(--bg-white);
+}
+
+.bg-dark-01 {
+    background: var(--dark-01);
+}
+
+.bg-dark-02 {
+    background: var(--dark-02);
+}
+
+.bg-dark-03 {
+    background: var(--dark-03);
+}
+.bg-orange-01{
+    background: var(--orange-01);
+}
+/* font color  */
+.font-white {
+    color: var(--white);
+}
+
+.font-dark-01 {
+    color: var(--dark-01)
+}
+
+.font-dark-02 {
+    color: var(--dark-02)
+}
+
+.font-dark-03 {
+    color: var(--dark-03)
+}
+
+/* footer color  */
+.font-footer-dark-01 {
+    color: var(--footer-dark-01)
+}
+
+.font-footer-dark-02 {
+    color: var(--footer-dark-02)
+}
+
+/* Font size  */
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.fs-24 {
+    font-size: 24px;
+}
+
+.fs-32 {
+    font-size: 32px;
+}
+
+.fs-48 {
+    font-size: 48px;
+}
+
+/* font weight  */
+.fw-200 {
+    font-weight: 200;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 600;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+/* font align  */
+.text-center {
+    text-align: center;
+}
+
+/* Container  */
+.container {
+    width: 1340px;
+    margin: 0 auto;
+}
+
+/* primary btn for all content  */
+.primary-btn {
+    padding: 12px 20px;
+    align-items: flex-start;
+    border-radius: 8px;
+    background: var(--bg-button);
+    border: none;
+    color: var(--white);
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.hr {
+    width: 364px;
+    height: 1px;
+    opacity: 0.3;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    background: linear-gradient(90deg, #7E90FE 0%, #9873FF 100%);
+}

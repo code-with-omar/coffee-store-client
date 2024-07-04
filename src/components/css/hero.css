@@ -1,0 +1,38 @@
+.coffee-cup-section {
+    background: url('./../../../public/images/more/3.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+    height: 700px;
+    position: relative;
+}
+
+.coffee-cup-section h2 {
+    font-family: 'cursive';
+    font-size: 2.5rem;
+}
+
+.coffee-cup-section p{
+    line-height: 30px;
+}
+
+.hero-details {
+    width: 724px;
+    height: 224px;
+    position: absolute;
+    top: 45%;
+    right: 8%;
+
+}
+
+.learn-more-button {
+    font-family: 'cursive';
+    border-color: #c8a165;
+    color: #c8a165;
+}
+
+.learn-more-button:hover {
+    background-color: #c8a165;
+    border-color: #c8a165;
+    color: white;
+}
