@@ -1,0 +1,25 @@
+.about-wrap {
+    background: #ECEAE3;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.about-wrap img {
+    width: 70px;
+    height: 70px;
+}
+
+.about-wrap h3 {
+    color: #331A15;
+    font-family: Rancho;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.about-wrap p {
+    color: #1B1A1A;
+    font-family: Raleway;
+    line-height: 26px;
+}
