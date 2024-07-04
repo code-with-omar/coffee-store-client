@@ -12,6 +12,7 @@ import SingUp from './components/SingUp.jsx';
 import AuthProvider from './components/providers/AuthProvider.jsx';
 import Users from './components/Users.jsx';
 import SignIn from './components/SignIn.jsx';
+import View from './components/View.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
   {
     path: "/addCoffee",
     element: <AddCoffee></AddCoffee>
+  },
+  {
+    path:'/viewCoffee/:id',
+    element:<View></View>,
+    loader:({params})=>fetch(`http://localhost:5000/coffee/${params.id}`)
   },
   {
     path: "/update/:id",
