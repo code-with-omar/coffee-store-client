@@ -14,7 +14,7 @@ function App() {
   const [coffees, setCoffees] = useState(loadedCoffees);
   return (
     <Container fluid>
-      <Header></Header>
+
       <Hero></Hero>
       <About></About>
       <Container fluid>
@@ -34,8 +34,7 @@ function App() {
           </Row>
         </Container>
       </Container>
-      <Footer></Footer>
-      <FooterButtom></FooterButtom>
+      
     </Container>
 
 

@@ -15,43 +15,51 @@ import SignIn from './components/SignIn.jsx';
 import View from './components/View.jsx';
 
 import MessageUs from './components/MessageUs.jsx';
+import Home from './components/Home.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App></App>,
-    loader: () => fetch('http://localhost:5000/coffee')
+    element: <Home></Home>,
+    children: [
+      {
+        path: "/",
+        element: <App></App>,
+        loader: () => fetch('http://localhost:5000/coffee')
+      },
+      {
+        path: "/addCoffee",
+        element: <AddCoffee></AddCoffee>
+      },
+      {
+        path: '/viewCoffee/:id',
+        element: <View></View>,
+        loader: ({ params }) => fetch(`http://localhost:5000/coffee/${params.id}`)
+      },
+      {
+        path: "/update/:id",
+        element: <UpdateCoffee></UpdateCoffee>,
+        loader: ({ params }) => fetch(`http://localhost:5000/coffee/${params.id}`)
+      },
+      {
+        path: "/singup",
+        element: <SingUp></SingUp>
+      },
+      {
+        path: "/signin",
+        element: <SignIn></SignIn>
+      },
+      {
+        path: '/users',
+        element: <Users></Users>,
+        loader: () => fetch('http://localhost:5000/users')
+      },
+      {
+        path: '/message',
+        element: <MessageUs></MessageUs>
+      }
+    ]
   },
-  {
-    path: "/addCoffee",
-    element: <AddCoffee></AddCoffee>
-  },
-  {
-    path: '/viewCoffee/:id',
-    element: <View></View>,
-    loader: ({ params }) => fetch(`http://localhost:5000/coffee/${params.id}`)
-  },
-  {
-    path: "/update/:id",
-    element: <UpdateCoffee></UpdateCoffee>,
-    loader: ({ params }) => fetch(`http://localhost:5000/coffee/${params.id}`)
-  },
-  {
-    path: "/singup",
-    element: <SingUp></SingUp>
-  },
-  {
-    path: "/signin",
-    element: <SignIn></SignIn>
-  },
-  {
-    path: '/users',
-    element: <Users></Users>,
-    loader: () => fetch('http://localhost:5000/users')
-  },
-  {
-    path: '/message',
-    element: <MessageUs></MessageUs>
-  }
+
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
