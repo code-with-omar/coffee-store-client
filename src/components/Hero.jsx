@@ -1,4 +1,4 @@
-import { Button, Container } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import './css/hero.css'
 import './css/index.css'
 import { Link } from "react-router-dom";
@@ -14,6 +14,9 @@ const Hero = () => {
                 <Button variant="outline-light" className="learn-more-button font-dark-01 fs-24 fw-400 bg-orange-01">Learn More</Button>
                 <Link to='/singup'>
                     <Button variant="outline-light" className="learn-more-button font-dark-01 fs-24 fw-400 bg-orange-01 mx-4">Sign Up/In</Button>
+                </Link>
+                <Link to='/users'>
+                    <Button variant="outline-light" className="learn-more-button font-dark-01 fs-24 fw-400 bg-orange-01 mx-4">Active Users</Button>
                 </Link>
             </div>
         </div>

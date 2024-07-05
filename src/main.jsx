@@ -16,6 +16,7 @@ import View from './components/View.jsx';
 
 import MessageUs from './components/MessageUs.jsx';
 import Home from './components/Home.jsx';
+import NotFoundPage from './components/NotFoundPage.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
       {
         path: '/message',
         element: <MessageUs></MessageUs>
+      },
+      {
+        path:'*',
+        element:<NotFoundPage></NotFoundPage>
       }
     ]
   },
