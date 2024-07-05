@@ -36,15 +36,15 @@ const MessageUs = () => {
             <h2 className="message-heading font-dark-02 font-family fw-400 fs-45">Connect with Us</h2>
             <Form onSubmit={handleContact} className="message-form ">
                 <Form.Group controlId="formName" className="mb-3">
-                    <Form.Control type="text" name="name" placeholder="Name" />
+                    <Form.Control type="text" name="name" placeholder="Name" required/>
                 </Form.Group>
 
                 <Form.Group controlId="formEmail" className="mb-3">
-                    <Form.Control type="email" name="email" placeholder="Email" />
+                    <Form.Control type="email" name="email" placeholder="Email" required/>
                 </Form.Group>
 
                 <Form.Group controlId="formMessage" className="mb-3">
-                    <Form.Control as="textarea" name="message" rows={3} placeholder="Message" />
+                    <Form.Control as="textarea" name="message" rows={3} placeholder="Message" required/>
                 </Form.Group>
 
                 <div className="">
