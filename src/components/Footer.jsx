@@ -3,6 +3,7 @@ import Contact from "./Contact";
 import MessageUs from "./MessageUs";
 import './css/footer.css'
 
+
 const Footer = () => {
     return (
         <Container fluid className="footer-wrap">
@@ -16,6 +17,7 @@ const Footer = () => {
                     </Col>
                 </Row>
             </Container>
+            
         </Container>
     );
 };

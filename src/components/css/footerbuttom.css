@@ -1,0 +1,8 @@
+.footerbuttom-wrap {
+    background: url('./../../../public/images/more/15.jpg') no-repeat center center;
+    padding: 20px 0;
+}
+
+.footerbuttom-wrap h2 {
+    color: white;
+}
