@@ -61,9 +61,11 @@ a {
 .bg-dark-03 {
     background: var(--dark-03);
 }
-.bg-orange-01{
+
+.bg-orange-01 {
     background: var(--orange-01);
 }
+
 /* font color  */
 .font-white {
     color: var(--white);
@@ -153,33 +155,23 @@ a {
     text-align: center;
 }
 
-/* Container  */
-.container {
-    width: 1340px;
-    margin: 0 auto;
+.coffee-wrap {
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
-/* primary btn for all content  */
-.primary-btn {
-    padding: 12px 20px;
-    align-items: flex-start;
-    border-radius: 8px;
-    background: var(--bg-button);
-    border: none;
-    color: var(--white);
-    font-family: Manrope;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    cursor: pointer;
+.coffee-wrap h3 {
+    color: #331A15;
+    font-family: Rancho;
+    font-size: 55px;
+    color: #331A15;
+    text-align: center;
+    margin-bottom: 100px;
+
 }
 
-.hr {
-    width: 364px;
-    height: 1px;
-    opacity: 0.3;
-    margin-top: 24px;
-    margin-bottom: 24px;
-    background: linear-gradient(90deg, #7E90FE 0%, #9873FF 100%);
+.coffee-contains {
+    row-gap: 15px;
+    column-gap: 2%;
+   
 }

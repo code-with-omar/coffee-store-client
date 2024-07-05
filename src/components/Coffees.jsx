@@ -6,7 +6,7 @@ import Del from "../../public/images/delete.png"
 import { Link, } from "react-router-dom";
 import Swal from "sweetalert2";
 
-
+import './css/coffee.css'
 const Coffees = ({ coffee, coffees, setCoffees }) => {
     const { _id, name, nameOfChef, supplier, taste, category, details, photo } = coffee
 
@@ -43,8 +43,8 @@ const Coffees = ({ coffee, coffees, setCoffees }) => {
     }
     return (
 
-        <Col >
-            <Card>
+        <Col className="coffee-contain">
+            
                 <Row>
                     <Col>
                         {
@@ -63,7 +63,7 @@ const Coffees = ({ coffee, coffees, setCoffees }) => {
                     </Col>
 
                 </Row>
-            </Card >
+           
         </Col >
     );
 };

@@ -15,18 +15,23 @@ function App() {
       <Header></Header>
       <Hero></Hero>
       <About></About>
-      <Row xs={1} md={2} className="g-4">
-        {
-          coffees.map((coffee) =>
-            <Coffees
-              key={coffee._id}
-              coffee={coffee}
-              coffees={coffees}
-              setCoffees={setCoffees}
-            ></Coffees>
-          )
-        }
-      </Row>
+      <Container fluid>
+        <Container className='coffee-wrap'>
+          <h3 className='fw-400 font-dark-02'>Our Popular Products</h3>
+          <Row xs={1} md={2} className=" coffee-contains">
+            {
+              coffees.map((coffee) =>
+                <Coffees
+                  key={coffee._id}
+                  coffee={coffee}
+                  coffees={coffees}
+                  setCoffees={setCoffees}
+                ></Coffees>
+              )
+            }
+          </Row>
+        </Container>
+      </Container>
     </Container>
 
 
