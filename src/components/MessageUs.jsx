@@ -1,6 +1,6 @@
 import { Button, Container, Form } from "react-bootstrap";
 import Swal from "sweetalert2";
-
+import './css/messageus.css'
 const MessageUs = () => {
     const handleContact = (e) => {
         e.preventDefault();
@@ -32,9 +32,9 @@ const MessageUs = () => {
     }
 
     return (
-        <Container className="mt-5" style={{ maxWidth: '600px' }}>
-            <h2 className="text-center" style={{ fontFamily: 'cursive', color: '#3d220d' }}>Connect with Us</h2>
-            <Form onSubmit={handleContact}>
+        <Container className="message-wrap" >
+            <h2 className="message-heading font-dark-02 font-family fw-400 fs-45">Connect with Us</h2>
+            <Form onSubmit={handleContact} className="message-form ">
                 <Form.Group controlId="formName" className="mb-3">
                     <Form.Control type="text" name="name" placeholder="Name" />
                 </Form.Group>
@@ -47,8 +47,8 @@ const MessageUs = () => {
                     <Form.Control as="textarea" name="message" rows={3} placeholder="Message" />
                 </Form.Group>
 
-                <div className="text-center">
-                    <Button variant="outline-dark" type="submit" style={{ fontFamily: 'cursive', borderColor: '#3d220d', color: '#3d220d' }}>
+                <div className="">
+                    <Button variant="outline-dark" type="submit" className="message-btn fs-24 font-family fw-400">
                         Send Message
                     </Button>
                 </div>
