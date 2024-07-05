@@ -1,0 +1,32 @@
+.brand-logo {
+    width: 75px;
+    height: 90px;
+}
+
+.brand-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.logo-brand h2 {
+    font-size: 45px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.contact-details {
+}
+
+.contact-details h3 {
+    font-size: 45px;  
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.contact-way {
+    line-height: 36px;
+}

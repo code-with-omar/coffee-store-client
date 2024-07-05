@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import './index.css'
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -13,7 +13,8 @@ import AuthProvider from './components/providers/AuthProvider.jsx';
 import Users from './components/Users.jsx';
 import SignIn from './components/SignIn.jsx';
 import View from './components/View.jsx';
-import ContactUs from './components/ContactUs.jsx';
+
+import MessageUs from './components/MessageUs.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -48,8 +49,8 @@ const router = createBrowserRouter([
     loader: () => fetch('http://localhost:5000/users')
   },
   {
-    path: '/contact',
-    element: <ContactUs></ContactUs>
+    path: '/message',
+    element: <MessageUs></MessageUs>
   }
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(

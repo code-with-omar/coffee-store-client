@@ -1,7 +1,7 @@
 import { Button, Container, Form } from "react-bootstrap";
 import Swal from "sweetalert2";
 
-const ContactUs = () => {
+const MessageUs = () => {
     const handleContact = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -57,4 +57,4 @@ const ContactUs = () => {
     );
 };
 
-export default ContactUs;
+export default MessageUs;

@@ -6,6 +6,7 @@ import { useState } from 'react';
 import Hero from './components/Hero';
 import Header from './components/Header';
 import About from './components/About';
+import Footer from './components/Footer';
 
 function App() {
   const loadedCoffees = useLoaderData();
@@ -32,6 +33,7 @@ function App() {
           </Row>
         </Container>
       </Container>
+      <Footer></Footer>
     </Container>
 
 
