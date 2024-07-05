@@ -1,9 +1,10 @@
 import { useContext } from "react";
-import { Button, Container, Form } from "react-bootstrap";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { AuthContext } from "./providers/AuthProvider";
 import Swal from "sweetalert2";
-
-
+import Login from "./../../public/images/more/login.png"
+import "./css/singup.css"
+import { Link } from "react-router-dom";
 const SingUp = () => {
     const { createUser } = useContext(AuthContext);
     const handleSingUp = (e) => {
@@ -45,25 +46,30 @@ const SingUp = () => {
         form.reset()
     }
     return (
-        <Container className="mt-5">
-            <h2>Please Sing Up </h2>
-            <Form onSubmit={handleSingUp}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" name="email" placeholder="Enter email" />
-                    <Form.Text className="text-muted">
-                        We will never share your email with anyone else.
-                    </Form.Text>
-                </Form.Group>
+        <Container className="sign-up-wrap">
+            <h2 className="fw-600 font-family font-dark-02 text-center">Please Sing Up </h2>
+            <Row md={2} className="sing-up-contains">
+                <Col className="sing-up-image">
+                    <img src={Login} alt="" />
+                </Col>
+                <Col className="sign-up-form">
+                    <Form onSubmit={handleSingUp}>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control type="email" name="email" placeholder="Enter email" />
+                        </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" name="password" placeholder="Password" />
-                </Form.Group>
-                <Button variant="primary" type="submit">
-                    Sing Up
-                </Button>
-            </Form>
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Label>Password</Form.Label>
+                            <Form.Control type="password" name="password" placeholder="Password" />
+                        </Form.Group>
+                        <h3 className="fs-16">I you have an account <Link to='/signin' className="sing-up-link">Sing in</Link></h3>
+                        <Button variant="primary" type="submit">
+                            Sing Up
+                        </Button>
+                    </Form>
+                </Col>
+            </Row>
         </Container>
     )
 

@@ -1,0 +1,27 @@
+.sign-up-wrap{
+    padding: 100px;
+    padding-top: 50px;
+    padding-bottom: 0;
+}
+.sign-up-wrap h2{
+    font-size: 48px;
+}
+.sing-up-contains{
+    padding-top: 50px;
+}
+.sing-up-image,.sing-up-image img{
+    width: auto;
+    height: auto;
+}
+.sign-up-form input{
+   border: none;
+   background:#f6f6f2;
+}
+.sign-up-form a{
+    color: black;
+    border: 1px solid gay;
+}
+.sing-up-link{
+    color: black;
+    text-decoration: underline;
+}

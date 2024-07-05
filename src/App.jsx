@@ -4,11 +4,8 @@ import { useLoaderData } from 'react-router-dom';
 import Coffees from './components/Coffees';
 import { useState } from 'react';
 import Hero from './components/Hero';
-import Header from './components/Header';
-import About from './components/About';
-import Footer from './components/Footer';
-import FooterButtom from './components/FooterButtom';
 
+import About from './components/About';
 function App() {
   const loadedCoffees = useLoaderData();
   const [coffees, setCoffees] = useState(loadedCoffees);
@@ -34,7 +31,7 @@ function App() {
           </Row>
         </Container>
       </Container>
-      
+
     </Container>
 
 
